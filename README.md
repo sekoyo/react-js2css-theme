@@ -6,7 +6,9 @@ This tiny 500byte (not gzipped) component allows JS theme objects to be passed i
 
 - Switching CSS Variables for themes is unpleasant for users of your component, JS objects are easier to deal with.
 
-- CSS Variables are light years faster than using JS theme objects passed around via Context like most CSS-in-JS frameworks do because they don't trigger any React re-renders and the browser responding to CSS Variable changes is also faster and more lightweight.
+- CSS Variables changes are much, much faster than React re-renders via Context which is what CSS-in-JS solutions do.
+
+- If care about performance and bundle size and want to avoid CSS-in-JS solutions altogether you can still provide a nice JS theme object interface to your users.
 
 ## Install
 
