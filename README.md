@@ -47,3 +47,8 @@ Your component can now make use of the following CSS Variables:
 ```
 
 Now try changing the theme object and watch your component's theme change :)
+
+<h2>Requirements</h2>
+
+- All browsers except IE
+- React v16+ (I use a `useMemo` hook, you could easily fork this and not use one)
