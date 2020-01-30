@@ -1,4 +1,4 @@
-# React CSS Theme
+# React CSS Theming (with JS objects)
 
 This tiny 500byte (not gzipped) component allows JS theme objects to be passed into your component where they're converted into CSS Variables for internal use.
 
