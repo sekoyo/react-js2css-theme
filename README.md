@@ -12,15 +12,13 @@ https://codesandbox.io/s/react-js2css-theme-demo-s6xlx
 
 - CSS Variables changes are much, much faster than React re-renders via Context which is what CSS-in-JS solutions do.
 
-- If care about performance and bundle size and want to avoid CSS-in-JS solutions altogether you can still provide a nice JS theme object interface to your users.
+- If you care about performance and bundle size and want to avoid CSS-in-JS solutions altogether you can still provide a nice JS theme object interface to your users.
 
 ## Install
 
 ```
 yarn add react-js2css-theme
 ```
-
-Note this is an ESM module and does not polyfill to be compatible with IE. Screw IE.
 
 <h2>Usage</h2>
 
