@@ -10,7 +10,7 @@ https://codesandbox.io/s/react-js2css-theme-demo-s6xlx
 
 - Switching CSS Variables for themes is unpleasant for users of your component, JS objects are easier to deal with.
 
-- CSS Variables changes are much, much faster than React re-renders via Context which is what CSS-in-JS solutions do.
+- CSS Variable changes are much faster than React re-renders via Context which is what CSS-in-JS solutions do.
 
 - If you care about performance and bundle size and want to avoid CSS-in-JS solutions altogether you can still provide a nice JS theme object interface to your users.
 
