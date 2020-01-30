@@ -5,7 +5,7 @@ const toDashed = v => v.replace(/[A-Z]/g, m => '-' + m.toLowerCase());
 export function objToCSSVars(namespace, theme, cssString = '', parentKey = '') {
   return Object.entries(theme).reduce((s, [k, v]) => {
     const joinedKey = `${parentKey ? parentKey : `--${namespace}${parentKey}`}-${toDashed(k)}`;
-    if (typeof v === 'string') {
+    if (typeof v === 'string' || typeof v === 'number') {
       s += `${joinedKey}: ${v}; `;
     } else if (typeof v === 'object' && v.constructor === Object) {
       s = objToCSSVars(namespace, v, s, joinedKey);

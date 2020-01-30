@@ -29,6 +29,7 @@ const yourTheme = {
   background: 'black',
   textColor: 'white',
   fontFamily: '"Roboto", sans-serif',
+  fontWeight: 500,
   button: {
     padding: '10px',
   },
@@ -46,6 +47,7 @@ Your component can now make use of the following CSS Variables:
   --xx-background: black;
   --xx-text-color: white;
   --xx-font-family: 'Roboto', sans-serif;
+  --xx-font-weight: 500;
   --xx-button-padding: 10px;
 }
 ```

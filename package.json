@@ -1,6 +1,6 @@
 {
   "name": "react-js2css-theme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Converts JS theme object into CSS Variables on the fly to be consumed by your components",
   "keywords": [
     "react",
