@@ -18,7 +18,7 @@ yarn add react-js2css-theme
 
 Note this is an ESM module and does not polyfill to be compatible with IE. Screw IE.
 
-## Usage
+<h2>Usage</h2>
 
 ```js
 import JSToCSSTheme from 'react-js2css-theme';
