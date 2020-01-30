@@ -1,6 +1,6 @@
 {
   "name": "react-js2css-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts JS theme object into CSS Variables on the fly to be consumed by your components",
   "keywords": [
     "react",
@@ -12,6 +12,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "style": "./dist/styles.css",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepare": "yarn build",
     "start": "NODE_ENV=development rollup -c --watch",
