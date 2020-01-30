@@ -15,8 +15,7 @@
   "scripts": {
     "prepare": "yarn build",
     "start": "NODE_ENV=development rollup -c --watch",
-    "build": "NODE_ENV=production rollup -c",
-    "test": "mocha './src/**/*.test.js'"
+    "build": "NODE_ENV=production rollup -c"
   },
   "author": "Dominic Tobias <dominic.tobias@gmail.com>",
   "license": "ISC",
@@ -36,7 +35,6 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "mocha": "7.0.0-esm1",
     "rollup": "^1.27.14",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-scss": "^2.1.0",
