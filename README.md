@@ -2,6 +2,10 @@
 
 This tiny 500byte (not gzipped) component allows JS theme objects to be passed into your component where they're converted into CSS Variables for internal use.
 
+<h2>Demo</h2>
+
+https://codesandbox.io/s/react-js2css-theme-demo-s6xlx
+
 <h2>Why?</h2>
 
 - Switching CSS Variables for themes is unpleasant for users of your component, JS objects are easier to deal with.
