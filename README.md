@@ -28,6 +28,7 @@ import JSToCSSTheme from 'react-js2css-theme';
 const yourTheme = {
   background: 'black',
   textColor: 'white',
+  fontFamily: '"Roboto", sans-serif',
   button: {
     padding: '10px',
   },
@@ -44,6 +45,7 @@ Your component can now make use of the following CSS Variables:
 :root {
   --xx-background: black;
   --xx-text-color: white;
+  --xx-font-family: 'Roboto', sans-serif;
   --xx-button-padding: 10px;
 }
 ```
