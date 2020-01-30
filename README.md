@@ -53,4 +53,4 @@ Now try changing the theme object and watch your component's theme change :)
 <h2>Requirements</h2>
 
 - All browsers except IE
-- React v16+ (I use a `useMemo` hook, you could easily fork this and not use one)
+- React v16+ (Uses a `useMemo` hook, you could easily fork this and not use one)
