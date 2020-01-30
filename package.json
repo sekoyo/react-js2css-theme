@@ -1,6 +1,6 @@
 {
   "name": "react-js2css-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Converts JS theme object into CSS Variables on the fly to be consumed by your components",
   "keywords": [
     "react",
@@ -8,6 +8,11 @@
     "variables",
     "theme"
   ],
+  "homepage": "https://github.com/DominicTobias/react-js2css-theme.git",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/DominicTobias/react-js2css-theme.git"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
