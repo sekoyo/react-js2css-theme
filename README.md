@@ -23,8 +23,6 @@ yarn add react-js2css-theme
 <h2>Usage</h2>
 
 ```js
-import JSToCSSTheme from 'react-js2css-theme';
-
 const yourTheme = {
   background: 'black',
   textColor: 'white',
@@ -34,10 +32,28 @@ const yourTheme = {
     padding: '10px',
   },
 };
+```
+
+<h3>As a component</h3>
+
+```js
+import JSToCSSTheme from 'react-js2css-theme';
 
 <JSToCSSTheme namespace="xx" theme={yourTheme}>
   <YourComponent />
 </JSToCSSTheme>;
+```
+
+<h3>As a hook</h3>
+
+```js
+import { useJsToCss } from 'react-js2css-theme';
+
+function YourComponent() {
+  const themeStyle = useJsToCss('xx', yourTheme);
+
+  return <div>{themeStyle}</div>;
+}
 ```
 
 Your component can now make use of the following CSS Variables:
@@ -57,4 +73,3 @@ Now try changing the theme object and watch your component's theme change :)
 <h2>Requirements</h2>
 
 - All browsers except IE
-- React v16+ (Uses a `useMemo` hook, you could easily fork this and not use one)
