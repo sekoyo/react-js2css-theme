@@ -56,7 +56,7 @@ function YourComponent() {
 
   return (
     <div>
-      <style type="text/css">{themeStyle}</style>
+      <style>{themeStyle}</style>
       {/* ... your component JSX */}
     </div>
   );
