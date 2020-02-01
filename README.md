@@ -46,13 +46,20 @@ import JSToCSSTheme from 'react-js2css-theme';
 
 <h3>As a hook</h3>
 
+You may not wish to create an extra wrapping element, in this case you can use the hook:
+
 ```js
 import { useJsToCss } from 'react-js2css-theme';
 
 function YourComponent() {
   const themeStyle = useJsToCss('xx', yourTheme);
 
-  return <div>{themeStyle}</div>;
+  return (
+    <div>
+      <style type="text/css">{themeStyle}</style>
+      {/* ... your component JSX */}
+    </div>
+  );
 }
 ```
 

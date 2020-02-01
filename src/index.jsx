@@ -15,10 +15,7 @@ export function objToCSSVars(namespace, theme, cssString = '', parentKey = '') {
 }
 
 export function useJsToCss(namespace, theme) {
-  return useMemo(() => `<style type="text/css">:root {${objToCSSVars(namespace, theme)}</style>`, [
-    namespace,
-    theme,
-  ]);
+  return useMemo(() => `:root {${objToCSSVars(namespace, theme)}`, [namespace, theme]);
 }
 
 function CSSTheme({ namespace, theme, children }) {
@@ -26,7 +23,7 @@ function CSSTheme({ namespace, theme, children }) {
 
   return (
     <>
-      {themeStyle}
+      <style type="text/css">{themeStyle}</style>
       {children}
     </>
   );
