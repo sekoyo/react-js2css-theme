@@ -23,7 +23,7 @@ function CSSTheme({ namespace, theme, children }) {
 
   return (
     <>
-      <style type="text/css">{themeStyle}</style>
+      <style>{themeStyle}</style>
       {children}
     </>
   );
