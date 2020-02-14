@@ -5,7 +5,6 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import babel from 'rollup-plugin-babel';
-import scss from 'rollup-plugin-scss';
 
 const path = require('path');
 const pkg = require(path.join(__dirname, './package.json'));
@@ -32,17 +31,30 @@ const plugins = [
   replace({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }),
-  pkg.style && scss({ output: pkg.style }),
-  process.env.NODE_ENV === 'production' && terser(),
 ].filter(Boolean);
 
-export default {
-  input,
-  output: {
-    dir: './dist/',
-    format: 'esm',
-    globals,
+export default [
+  {
+    input,
+    output: {
+      file: './dist/bundle.js',
+      format: 'umd',
+      name: 'JSToCSSTheme',
+      globals,
+      esModule: false,
+      sourcemap: true,
+    },
+    plugins: plugins.concat(terser()),
+    external,
   },
-  plugins,
-  external,
-};
+  {
+    input,
+    output: {
+      dir: './dist/esm/',
+      format: 'esm',
+      globals,
+    },
+    plugins,
+    external,
+  },
+];
