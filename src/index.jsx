@@ -1,16 +1,15 @@
 import React, { useMemo } from 'react';
 
-const toDashed = v => v.replace(/[A-Z]/g, m => '-' + m.toLowerCase());
-
-export function objToCSSVars(namespace, theme, cssString = '', parentKey = '') {
-  return Object.entries(theme).reduce((s, [k, v]) => {
-    const joinedKey = `${parentKey ? parentKey : `--${namespace}${parentKey}`}-${toDashed(k)}`;
-    if (typeof v === 'string' || typeof v === 'number') {
-      s += `${joinedKey}: ${v}; `;
-    } else if (typeof v === 'object' && v.constructor === Object) {
-      s = objToCSSVars(namespace, v, s, joinedKey);
+function objToCSSVars(namespace, theme, cssString = '', parentKey = '') {
+  return Object.entries(theme).reduce((_cssString, [key, value]) => {
+    const casedKey = !parentKey ? key : key[0].toUpperCase() + key.substr(1);
+    const joinedKey = `${parentKey ? parentKey : `--${namespace}-${parentKey}`}${casedKey}`;
+    if (typeof value === 'string' || typeof value === 'number') {
+      _cssString += `${joinedKey}: ${value}; `;
+    } else if (typeof value === 'object' && value.constructor === Object) {
+      _cssString = objToCSSVars(namespace, value, _cssString, joinedKey);
     }
-    return s;
+    return _cssString;
   }, cssString);
 }
 

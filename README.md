@@ -68,10 +68,10 @@ Your component can now make use of the following CSS Variables:
 ```css
 :root {
   --xx-background: black;
-  --xx-text-color: white;
-  --xx-font-family: 'Roboto', sans-serif;
-  --xx-font-weight: 500;
-  --xx-button-padding: 10px;
+  --xx-textColor: white;
+  --xx-fontFamily: 'Roboto', sans-serif;
+  --xx-fontWeight: 500;
+  --xx-buttonPadding: 10px;
 }
 ```
 
